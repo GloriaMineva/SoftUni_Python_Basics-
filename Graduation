@@ -1,0 +1,17 @@
+average_grade = 0
+student_name = input()
+fail_grades = 0
+year_in_school = 1
+while fail_grades < 2:
+    current_grade = float(input())
+    if current_grade < 4:
+        fail_grades += 1
+        continue
+    average_grade += current_grade
+    year_in_school += 1
+    if year_in_school > 12:
+        break
+if fail_grades < 2:
+    print(f'{student_name} graduated. Average grade: {(average_grade / 12):.2f}')
+else:
+    print(f'{student_name} has been excluded at {year_in_school} grade')
