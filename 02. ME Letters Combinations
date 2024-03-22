@@ -1,0 +1,28 @@
+low_letter = ord(input())
+high_letter = ord(input())
+exclude_letter = ord(input())
+combination_counter = 0
+combination = ''
+for first_letter in range(low_letter, high_letter + 1):
+
+    if first_letter == exclude_letter:
+        continue
+    else:
+        first_letter = chr(first_letter)
+
+    for second_letter in range(low_letter, high_letter + 1):
+        if second_letter == exclude_letter:
+            continue
+        else:
+            second_letter = chr(second_letter)
+        for third_letter in range(low_letter, high_letter + 1):
+            if third_letter == exclude_letter:
+                continue
+            else:
+                third_letter = chr(third_letter)
+                combination += first_letter + second_letter + third_letter + ' '
+                combination_counter += 1
+print(f'{combination}{combination_counter}')
+
+
+
